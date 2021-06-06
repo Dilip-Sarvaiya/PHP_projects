@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){jQuery("#surplus-concert-ui-tabs").tabs()});

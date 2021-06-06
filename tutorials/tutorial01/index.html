@@ -1,0 +1,59 @@
+<html>
+<head>
+<script type="text/javascript" src="js/jquery.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<script>
+	$("document").ready(function(){
+
+	$("form").submit(function(){
+		var valUsername=$("#username").val();
+		var valPassword=$("#password").val();
+		if(valUsername=="" && valPassword=="")
+		{
+			alert("Please Enter Username and Password");
+			return false;
+		}
+		else if(valUsername=="")
+		{
+			alert("Please Enter Username");
+			return false;
+		}
+		else if(valPassword=="")
+		{
+			alert("Please Enter Password");
+			return false;
+		}
+		else
+		{
+			confirm("Your Data Submitted successfully...");
+			return true;
+		}
+		});
+	});
+</script>
+</head>
+<title>Login Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>	
+<center><h1 class="text-primary">Login Form</h1></center>
+
+<div class="container">
+<form >
+		<div class="form-group">
+			<label for="uname"><b>Username</b></label>
+			<input type="text" class="form-control" id="username" placeholder="Enter Username" name="username" >
+		</div>
+		<div class="form-group">
+			<label for="psw"><b>Password</b></label>
+			<input type="password" class="form-control" id="password" placeholder="Enter Password" name="password">
+		</div>
+        <div class="form-group">
+			<input type="submit" class="btn btn-success" value="Login" />
+		</div>
+		<a href="registration.html"><button type="button" class="btn btn-primary">Create a Account</button></a>
+</form>
+</div>
+</body>
+</html>
